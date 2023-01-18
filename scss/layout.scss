@@ -1,0 +1,144 @@
+@import "vars";
+@import "mixins";
+
+/*
+  h1 {
+    font-size: clamp(36px, 7vw, 48px);
+    font-weight: 900;
+  }
+  h2 {
+    font-size: clamp(28px, 5.5vw, 32px);
+    font-weight: 700;
+  }
+  h3 {
+    font-size: clamp(20px, 4.5vw, 24px);
+    font-weight: 400;
+  }
+  p {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+*/
+
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #111;
+}
+
+.header {
+  h1 {
+    font-size: clamp(30px, 5vw, 32px);
+  }
+  padding: 0 60px;
+  $h: 110px;
+  display: flex;
+  justify-content: space-between;
+  height: $h;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 99;
+  transition: all 0.25s ease;
+
+  &:before {
+    content: "";
+    display: block;
+    height: $h;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    height: 420px;
+    width: 100%;
+    background-color: rgba(darken($bluemint, 5), 0.7);
+    position: absolute;
+    left: 0;
+    top: $h;
+    z-index: -1;
+  }
+  &.on {
+    height: 300px;
+  }
+  .logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0 40px;
+    color: $bluemint;
+    height: $h;
+    padding: 0 10px;
+    margin-left: 60px;
+    a {
+      display: flex;
+      align-items: center;
+      height: $h;
+      img {
+        height: $h;
+      }
+    }
+    h1 {
+      @include ellipsis();
+      @include center();
+      height: $h;
+      font-weight: 700;
+    }
+  }
+
+  .nav {
+    transition: all 0.25s ease;
+
+    &_list {
+      display: flex;
+      justify-content: center;
+
+      > li {
+        padding-left: 10px;
+
+        > a {
+          font-size: 18px;
+          font-weight: 700;
+          height: $h;
+          display: flex;
+          align-items: center;
+          padding: 0 40px;
+          &:hover {
+            color: $bluemint;
+          }
+        }
+      }
+
+      &_sub {
+        li {
+          padding: 5px 0;
+          a {
+            padding: 10px 0;
+            line-height: 2;
+            @include center();
+            color: #fff;
+            &:hover {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  .loginJoin {
+    gap: 0 20px;
+    z-index: 99;
+    height: $h;
+    @include center();
+    span {
+      &:hover {
+        color: $bluemint;
+      }
+    }
+  }
+}

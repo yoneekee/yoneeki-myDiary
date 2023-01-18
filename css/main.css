@@ -1,0 +1,109 @@
+.section {
+  padding: 20px 0;
+}
+
+.mainImg {
+  width: 100%;
+  position: relative;
+}
+.mainImg h1 {
+  font-size: clamp(36px, 7vw, 48px);
+  font-weight: 900;
+}
+.mainImg h2 {
+  font-size: clamp(28px, 5.5vw, 32px);
+  font-weight: 700;
+}
+.mainImg h3 {
+  font-size: clamp(20px, 4.5vw, 24px);
+  font-weight: 400;
+}
+.mainImg p {
+  font-size: clamp(12px, 3vw, 16px);
+}
+.mainImg-bg {
+  background-image: url(../images/background.png);
+  height: 96vh;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  background-position: 50%;
+}
+.mainImg-txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 340px;
+  right: 120px;
+  text-align: end;
+  line-height: 1.5;
+}
+.mainImg-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+.mainImg-btn-sub {
+  width: 150px;
+  height: 50px;
+  border: 1px dotted #1fa9ae;
+  color: #1fa9ae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainImg-btn-sub h3 {
+  text-align: center;
+  vertical-align: middle;
+}
+.mainImg-btn-sub:hover {
+  color: #fff;
+  background-color: #1fa9ae;
+}
+.mainImg-book {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  animation: arrow-left 0.5s ease infinite alternate;
+}
+.mainImg-book img {
+  width: 150px;
+}
+.mainImg-book-txt {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 300px;
+}
+.mainImg-book-txt h3 {
+  font-weight: 700;
+}
+
+/********** animation ***********/
+@keyframes arrow-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@keyframes arrow-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes arrow-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
