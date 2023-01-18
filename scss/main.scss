@@ -70,8 +70,8 @@
 
   &-book {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
+    bottom: 55px;
+    left: 65px;
     animation: arrow-left 0.5s ease infinite alternate;
     z-index: 10;
     img {
@@ -83,7 +83,8 @@
       left: 80px;
       width: 300px;
       h3 {
-        font-weight: 700;
+        font-weight: 400;
+        color: $gray;
       }
     }
   }
