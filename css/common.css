@@ -38,3 +38,29 @@ button {
 .bluemint {
   color: #1fa9ae;
 }
+
+/********** animation ***********/
+@keyframes arrow-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@keyframes arrow-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes arrow-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}

@@ -68,6 +68,7 @@
   bottom: 50px;
   left: 50px;
   animation: arrow-left 0.5s ease infinite alternate;
+  z-index: 10;
 }
 .mainImg-book img {
   width: 150px;
@@ -80,30 +81,4 @@
 }
 .mainImg-book-txt h3 {
   font-weight: 700;
-}
-
-/********** animation ***********/
-@keyframes arrow-move {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-@keyframes arrow-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-10px);
-  }
-}
-@keyframes arrow-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(10px);
-  }
 }
